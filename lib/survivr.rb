@@ -71,7 +71,7 @@ def phase_two
 end
 
 def phase_three
-  immune = @immune.sample
+  immune = @borneo.individual_immunity_challenge
   jury=[]
   7.times do
     element = @merge_tribe.tribal_council(immune: immune)

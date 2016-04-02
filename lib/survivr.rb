@@ -23,11 +23,10 @@ require 'colorizr'
 def phase_one
   eliminated = []
   8.times do
-    vote_out_tribe = Random.new
-    vote_out_tribe= vote_out_tribe.rand(2)
-    elim_tribe = @borneo.tribes[vote_out_tribe]
+    elim_tribe = @borneo.immunity_challenge
+    index = @borneo.tribes.index(elim_tribe)
     element = elim_tribe.tribal_council
-    @borneo.tribes[vote_out_tribe].members = @borneo.tribes[vote_out_tribe].members - Array(element)
+    @borneo.tribes[index].members = @borneo.tribes[index].members - Array(element)
     eliminated << element
   end
   puts "Phase 1 eliminations: ".red
@@ -42,20 +41,20 @@ end
 def phase_two
   @borneo.clear_tribes
   @borneo.add_tribe(@merge_tribe)
-  immune = []
+  @immune = []
   eliminated=[]
-  while immune.length!=3
+  while @immune.length!=3
     val = @borneo.individual_immunity_challenge
-    immune.push(val) if !immune.include? val
+    @immune.push(val) if !@immune.include? val
   end
   3.times do
-    element = @borneo.tribes.first.tribal_council
+    element = @borneo.tribes.first.tribal_council(immune: @immune)
     @borneo.tribes.first.members = @borneo.tribes.first.members - Array(element)
     eliminated << element
   end
   puts "Phase 2 Winners".green
   puts "----------------------------------------"
-  immune.each_with_index do |winner,index|
+  @immune.each_with_index do |winner,index|
     puts "#{index+1}: #{winner}"
   end
   puts "----------------------------------------"
@@ -72,9 +71,10 @@ def phase_two
 end
 
 def phase_three
+  immune = @immune.sample
   jury=[]
   7.times do
-    element = @merge_tribe.tribal_council
+    element = @merge_tribe.tribal_council(immune: immune)
     @merge_tribe.members = @merge_tribe.members - Array(element)
     jury<< element
   end
@@ -83,13 +83,13 @@ def phase_three
   puts "Jury".yellow
   puts "----------------------------------------"
   jury.each_with_index do |member,index|
-    puts "#{index}: #{member}"
+    puts "#{index+1}: #{member}"
   end
   puts "----------------------------------------"
   puts "Finalists".green
   puts "----------------------------------------"
   @merge_tribe.members.each_with_index do |finalist,index|
-    puts "#{index}: #{finalist}"
+    puts "#{index+1}: #{finalist}"
   end
   puts "----------------------------------------"
   jury.length

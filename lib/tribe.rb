@@ -13,8 +13,6 @@ class Tribe
 
   def tribal_council(options={})
     not_immune = (@members - Array(options[:immune]))
-    vote_out = Random.new
-    vote_out = vote_out.rand(not_immune.length)
-    not_immune[vote_out]
+    not_immune.sample
   end
 end

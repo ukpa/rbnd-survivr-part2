@@ -1,5 +1,5 @@
 class Jury
-  attr_accessor :members,:finalists
+  attr_reader :members,:finalists
   def initialize
     @members=[]
     @finalists={}

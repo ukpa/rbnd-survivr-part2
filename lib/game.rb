@@ -11,7 +11,7 @@ class Game
   end
 
   def immunity_challenge
-    @tribes[0]
+    @tribes.sample
   end
 
   def clear_tribes
@@ -30,8 +30,6 @@ class Game
   end
 
   def individual_immunity_challenge
-    immune = Random.new
-    immune = immune.rand(@tribes.first.members.length)
-    @tribes.first.members[immune]
+    @tribes.first.members.sample
   end
 end

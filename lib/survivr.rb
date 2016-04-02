@@ -2,6 +2,7 @@ require_relative "game"
 require_relative "tribe"
 require_relative "contestant"
 require_relative "jury"
+require 'colorizr'
 
 #After your tests pass, uncomment this code below
 #=========================================================
@@ -29,6 +30,12 @@ def phase_one
     @borneo.tribes[vote_out_tribe].members = @borneo.tribes[vote_out_tribe].members - Array(element)
     eliminated << element
   end
+  puts "Phase 1 eliminations: ".red
+  puts "----------------------------------------"
+  eliminated.each_with_index do |contestants,index|
+    puts "#{index+1}: #{contestants}"
+  end
+  puts "----------------------------------------"
   eliminated.length
 end
 
@@ -46,6 +53,19 @@ def phase_two
     @borneo.tribes.first.members = @borneo.tribes.first.members - Array(element)
     eliminated << element
   end
+  puts "Phase 2 Winners".green
+  puts "----------------------------------------"
+  immune.each_with_index do |winner,index|
+    puts "#{index+1}: #{winner}"
+  end
+  puts "----------------------------------------"
+  puts "Phase 2 Eliminations".red
+  puts "----------------------------------------"
+  eliminated.each_with_index do |contestant,index|
+    puts "#{index+1}: #{contestant}"
+  end
+  puts "----------------------------------------"
+
   @merge_tribe = @borneo.tribes.first
   eliminated.length
 
@@ -59,6 +79,19 @@ def phase_three
     jury<< element
   end
   @jury.add_member(jury).flatten!
+
+  puts "Jury".yellow
+  puts "----------------------------------------"
+  jury.each_with_index do |member,index|
+    puts "#{index}: #{member}"
+  end
+  puts "----------------------------------------"
+  puts "Finalists".green
+  puts "----------------------------------------"
+  @merge_tribe.members.each_with_index do |finalist,index|
+    puts "#{index}: #{finalist}"
+  end
+  puts "----------------------------------------"
   jury.length
 end
 
@@ -68,7 +101,6 @@ end
 phase_one #8 eliminations
 @merge_tribe = @borneo.merge("Cello") # After 8 eliminations, merge the two tribes together
 phase_two #3 more eliminations
-puts "This shit #{@merge_tribe.members.length}"
 @jury = Jury.new
 phase_three #7 elminiations become jury members
 finalists = @merge_tribe.members #set finalists

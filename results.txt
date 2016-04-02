@@ -1,0 +1,61 @@
+Pagong
+Tagi
+[31mPhase 1 eliminations: [0m
+
+----------------------------------------
+1: dena
+2: aparna
+3: zhalisa
+4: farrin
+5: julia
+6: orit
+7: colt
+8: juliana
+----------------------------------------
+Cello
+[32mPhase 2 Winners[0m
+
+----------------------------------------
+1: rasha
+2: fernando
+3: ari
+----------------------------------------
+[31mPhase 2 Eliminations[0m
+
+----------------------------------------
+1: muhammed
+2: carlos
+3: diego
+----------------------------------------
+[33mJury[0m
+
+----------------------------------------
+0: sofia
+1: walter
+2: gauri
+3: ari
+4: trinh
+5: poornima
+6: rasha
+----------------------------------------
+[32mFinalists[0m
+
+----------------------------------------
+0: juha
+1: fernando
+----------------------------------------
+juha
+Jury
+""
+""
+""
+""
+""
+""
+""
+Finalist: juha | Votes: 5
+Finalist: fernando | Votes: 2
+----------------------------------------
+Yay, our winner is:
+[35mjuha[0m
+

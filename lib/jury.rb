@@ -15,7 +15,8 @@ class Jury
       @members.each do |member|
         vote = Random.new
         vote=vote.rand(finalists.length)
-        puts @finalists[finalists[vote]]+=1
+        @finalists[finalists[vote]]+=1
+        p ""
       end
       @finalists
   end
@@ -29,7 +30,9 @@ class Jury
   def announce_winner(final_votes)
     final_votes.each do |finalist,votes|
       if votes == final_votes.values.max
-        puts finalist
+        puts "----------------------------------------"
+        puts "Yay, our winner is:"
+        puts "#{finalist.to_s.pink}"
         return finalist
       end
     end

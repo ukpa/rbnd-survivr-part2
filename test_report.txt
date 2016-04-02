@@ -1,0 +1,201 @@
+Pagong
+Tagi
+[31mPhase 1 eliminations: [0m
+
+----------------------------------------
+1: diego
+2: aparna
+3: rasha
+4: dena
+5: trinh
+6: gauri
+7: sofia
+8: julia
+----------------------------------------
+Cello
+[32mPhase 2 Winners[0m
+
+----------------------------------------
+1: ari
+2: colt
+3: fernando
+----------------------------------------
+[31mPhase 2 Eliminations[0m
+
+----------------------------------------
+1: walter
+2: ari
+3: farrin
+----------------------------------------
+[33mJury[0m
+
+----------------------------------------
+0: poornima
+1: orit
+2: muhammed
+3: fernando
+4: carlos
+5: colt
+6: zhalisa
+----------------------------------------
+[32mFinalists[0m
+
+----------------------------------------
+0: juliana
+1: juha
+----------------------------------------
+juliana
+Jury
+""
+""
+""
+""
+""
+""
+""
+Finalist: juliana | Votes: 5
+Finalist: juha | Votes: 2
+----------------------------------------
+Yay, our winner is:
+[35mjuliana[0m
+
+Run options: --seed 504
+
+# Running:
+
+Pagong
+Tagi
+#<Contestant:0x007ffd61204048 @name="diego">
+#<Contestant:0x007ffd61204750 @name="juha">
+#<Contestant:0x007ffd612044d0 @name="poornima">
+#<Contestant:0x007ffd61207130 @name="julia">
+#<Contestant:0x007ffd61204750 @name="juha">
+#<Contestant:0x007ffd612064d8 @name="sofia">
+#<Contestant:0x007ffd61204048 @name="diego">
+#<Contestant:0x007ffd612044d0 @name="poornima">
+#<Contestant:0x007ffd61204048 @name="diego">
+.Pagong
+Tagi
+.Pagong
+Tagi
+.Pagong
+Tagi
+.Pagong
+Tagi
+.Pagong
+Tagi
+....""
+""
+""
+""
+""
+""
+""
+.----------------------------------------
+Yay, our winner is:
+[35morit[0m
+
+.""
+""
+""
+""
+""
+""
+""
+..""
+""
+""
+""
+""
+""
+""
+....Pagong
+Tagi
+tribe
+.Pagong
+Tagi
+combined_tribe
+.Pagong
+Tagi
+.Pagong
+Tagi
+combined_tribe
+.Pagong
+Tagi
+combined_tribe
+.Pagong
+Tagi
+.Pagong
+Tagi
+.Pagong
+Tagi
+.Pagong
+Tagi
+.Pagong
+Tagi
+Cello
+[31mPhase 1 eliminations: [0m
+
+----------------------------------------
+1: colt
+2: sofia
+3: gauri
+4: carlos
+5: walter
+6: trinh
+7: muhammed
+8: farrin
+----------------------------------------
+.Pagong
+Tagi
+Cello
+[33mJury[0m
+
+----------------------------------------
+0: dena
+1: muhammed
+2: farrin
+3: poornima
+4: aparna
+5: rasha
+6: zhalisa
+----------------------------------------
+[32mFinalists[0m
+
+----------------------------------------
+0: diego
+1: orit
+2: juha
+3: walter
+4: carlos
+5: juliana
+6: julia
+7: fernando
+8: trinh
+9: gauri
+10: colt
+11: sofia
+12: ari
+----------------------------------------
+.Pagong
+Tagi
+Cello
+[32mPhase 2 Winners[0m
+
+----------------------------------------
+1: diego
+2: rasha
+3: orit
+----------------------------------------
+[31mPhase 2 Eliminations[0m
+
+----------------------------------------
+1: trinh
+2: orit
+3: zhalisa
+----------------------------------------
+.
+
+Finished in 0.004927s, 5885.4986 runs/s, 6697.2916 assertions/s.
+
+29 runs, 33 assertions, 0 failures, 0 errors, 0 skips

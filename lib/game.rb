@@ -1,5 +1,5 @@
 class Game
-  attr_reader :tribes
+  attr_accessor :tribes
   def initialize(tribe1,tribe2)
     @tribes = []
     @tribes << tribe1
@@ -30,6 +30,8 @@ class Game
   end
 
   def individual_immunity_challenge
-    @tribes[0].members[0]
+    immune = Random.new
+    immune = immune.rand(@tribes.first.members.length)
+    @tribes.first.members[immune]
   end
 end

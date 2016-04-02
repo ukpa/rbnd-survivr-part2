@@ -27,6 +27,11 @@ class Jury
   end
 
   def announce_winner(final_votes)
-    final_votes.each {|finalist,votes| return finalist if votes = final_votes.values.max}
+    final_votes.each do |finalist,votes|
+      if votes == final_votes.values.max
+        puts finalist
+        return finalist
+      end
+    end
   end
 end
